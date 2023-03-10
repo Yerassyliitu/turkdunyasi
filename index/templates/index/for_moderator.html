@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>moderator</title>
+    <link rel="stylesheet" href="{% static 'css/style_2.css' %}">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>number</th>
+            <th>country</th>
+            <th>language</th>
+            <th>class</th>
+        </tr>
+        {% for cli in client %}
+            <tr>
+             <td>{{ cli.id }}</td>
+             <td>{{ cli.name }}</td>
+             <td>{{ cli.number }}</td>
+             <td>{{ cli.country }}</td>
+             <td>{{ cli.language }}</td>
+             <td>{{ cli.school_class }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,96 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form input[type="text"], form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c9c9c9;
+    margin-bottom: 20px;
+    color: #1f5bff;
+    height: 50px;
+    font-family: 'Ubuntu';
+    font-size: 15px;
+}
+
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.406 9.188L12 13.782l4.594-4.594a.999.999 0 111.414 1.414l-5.298 5.298a.999.999 0 01-1.414 0L5.992 10.6a.997.997 0 010-1.414.997.997 0 011.414 0l.02.022z' fill='%23353C4E'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 20px;
+}
+
+form input[type="submit"] {
+    background-color: #f64c72;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3baea1;
+}
+
+label, input {
+    display: block;
+}
+
+.formbody{
+    background-color: white;
+}
+
+.formtext{
+    text-align: center;
+    color: #1f5bff;
+    display: block;
+    font-size: 36px;
+    line-height: 1.23;
+    font-weight: 800;
+    font-family: 'Ubuntu',Arial,sans-serif;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.formimage{
+    width: 600px;
+    float: right;
+    border-radius: 20px;
+}
+
+table {
+  border-collapse: collapse; /* Сводим границы ячеек в одну линию */
+  width: 100%; /* Устанавливаем ширину таблицы на 100% */
+  font-family: Arial, sans-serif; /* Устанавливаем шрифт */
+}
+
+th, td {
+  text-align: left; /* Выравниваем текст в ячейках слева */
+  padding: 8px; /* Устанавливаем отступ внутри ячеек */
+  border: 1px solid #ddd; /* Устанавливаем рамку вокруг ячеек */
+}
+
+th {
+  background-color: #f2f2f2; /* Задаем цвет фона для заголовков */
+}
+.messages{
+  text-align: center;
+  color: #1f5bff;
+  font-size: 20px;
+}

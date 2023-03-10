@@ -1,0 +1,251 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+* {-webkit-font-smoothing: antialiased;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 0px;
+}
+
+.img-turk{
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full{
+    background-color: rgb(31, 91, 255, 1);
+    color: white;
+}
+
+.middle{
+    padding-left: 100px;
+    margin-right: 200px;
+
+}
+
+.left{
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.right{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.element{
+    margin:auto;
+    padding-bottom: 20px;
+    padding-top:20px;
+}
+
+.full_bottom{
+    background-color: rgb(31, 91, 255, 1);
+}
+
+.consult{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin:auto;
+}
+
+.element-bottom{
+    margin:auto;
+    padding-bottom: 20px;
+}
+
+/* Это стилизация для конкретного примера, вы можете стилизировать под свой макет */
+.change-photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Set a fixed height and width for the parent element */
+  weight:300px;
+  margin-top:50px;
+
+}
+
+.change-photo{
+  margin: auto;
+}
+
+.change-photos .change-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Сразу скрываем вторую картинку */
+.change-photos .change-photo:nth-of-type(2) {
+  display: none;
+}
+
+/* При наведении курсора на родительский класс change-photos первую картинку скрываем, а вторую показываем */
+
+.change-photos:hover .change-photo:nth-of-type(1) {
+  display: none;
+}
+
+.change-photos:hover .change-photo:nth-of-type(2) {
+  display: block;
+}
+
+.change-photos:hover {
+  cursor: pointer;
+}
+
+.search{
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.filter{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+
+
+.search1{
+    padding-left: 30px;
+}
+
+.university_text_basic{
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.university_text{
+    text-align: center;
+    font-family: 'Ubuntu';
+}
+
+.drop{
+    font-family: 'Ubuntu';
+    color: white;
+}
+
+.dr{
+    font-family: 'Ubuntu';
+}
+
+/* University */
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+
+.carousel{
+    width:100%;
+    margin-left: auto;
+}
+
+.photos-and-desc{
+    margin-top: 120px;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: rgb(31, 91, 255, 1);
+
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.consult a{
+    color: white;
+}
+
+.nothing{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.des{
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Ubuntu';
+    line-height: 1.55;
+    margin-left: 50px;
+}
+
+.title_desc{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.texts{
+    margin-bottom: 20px;
+}
+
+.price{
+    font-size: 20px;
+}
+
+.content {
+  display: none;
+  margin-top: 30px;
+}
+
+.photos_and_desk{
+    padding-left: 10px;
+}
+
+.scrollable-content {
+  max-height: 100px;
+}
+
+
+button.btn.btn-link.nav-btn {
+    margin-left: 20%;
+    margin-top: 35px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px black;
+    text-decoration: none;
+    color: #1f5bff;
+    font-weight: 700;
+}
+
+.living, .requir, .special{
+    margin-left: 20px;
+}
