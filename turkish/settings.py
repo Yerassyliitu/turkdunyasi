@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'index.apps.IndexConfig',
     'phonenumber_field',
     'debug_toolbar',
-    'whitenoise.runserver_nostatic'
 ]
 
 MIDDLEWARE = [
