@@ -1,0 +1,1 @@
+web: gunicorn turkish.wsgi --log-file -
