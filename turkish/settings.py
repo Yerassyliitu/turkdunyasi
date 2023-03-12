@@ -28,7 +28,7 @@ SECRET_KEY = 'g8$6*83j(88052%8iq3#t#3ug4jci*4r3x64tstonzd^9aw(-a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'turkdunyasi.herokuapp.com', 'web-production-366a.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'turkdunyasi.herokuapp.com']
 
 # Application definition
 
