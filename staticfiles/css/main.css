@@ -320,7 +320,9 @@ button:hover .uli{
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 30px;
+    padding-top: 0;
+    padding-right: 50px;
+    padding-left: 30px;
     margin-bottom: 50px;
 }
 .video-section p{
