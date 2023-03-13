@@ -15,8 +15,9 @@
     </style>
 </head>
 <body>
-
+<div class="row">
 <!--НАЧАЛО НАВБАРА-->
+<div class="col-sm-12">
 <div class="row full">
     <div class="col-md-4 col-sm-12 element left">
         <i class="fa-solid fa-phone-volume"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-whatsapp"></i>
@@ -46,10 +47,11 @@
     </div>
     <div class="col-md-4 col-sm-12 element-bottom"></div>
 </div>
+</div>
 <!--КОНЕЦ НАВБАРА-->
 
 <!--НАЧАЛО ФИЛЬТР-->
-<div class="row filter-and-search">
+<div class="row filter-and-search col-sm-12">
     <div class="col-md-6 filter">
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle d-sm-block" type="button" data-toggle="dropdown">
@@ -77,7 +79,7 @@
 </div>
 <!--КОНЕЦ ПОИСКА-->
 <!--НАЧАЛО КАТАЛОГА-->
-<div class="row universities-container">
+<div class="row universities-container col-sm-12">
     {% if query%}
       {% if universities %}
         {% for result in universities %}
@@ -145,7 +147,7 @@
         {% endif %}
     {% endif %}
 </div>
-
+</div>
 <!--КОНЕЦ КАТАЛОГА-->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
