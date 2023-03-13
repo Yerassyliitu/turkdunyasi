@@ -11,10 +11,10 @@
         <h2><b>Пожалуйста заполните форму</b></h2>
     </div>
     <div class="row">
-        <div class="col-md-6 col-sm-12 formimagediv">
+        <div class="col-md-6 col-12 formimagediv">
             <img class="formimage" src="https://thumb.tildacdn.com/tild6332-6535-4261-a561-376666636634/-/format/webp/noroot.png">
         </div>
-        <div class="col-md-6 col-sm-12 formdiv">
+        <div class="col-md-6 col-12 formdiv">
             <form class="client-form" method="POST" action="{% url 'client_form' %}">
             {% csrf_token %}
             {{ form.as_table }}
