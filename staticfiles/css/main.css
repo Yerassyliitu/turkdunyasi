@@ -98,7 +98,7 @@ nav{
 .box{
     max-width: 1200px;
     padding-left: 50px;
-
+    padding-right: 10px;
 }
 .box .rounded-pill{
     font-weight: 600;
@@ -329,7 +329,7 @@ button:hover .uli{
     
 }
 iframe{
-    width: 500px;
+    width: 70%;
     height: 281px;
 }
 
