@@ -15,17 +15,17 @@
     </style>
 </head>
 <body>
-<div class="row">
+
 <!--НАЧАЛО НАВБАРА-->
-<div class="col-sm-12">
+
 <div class="row full">
-    <div class="col-md-4 col-sm-12 element left">
+    <div class="col-md-4 col-12 element left">
         <i class="fa-solid fa-phone-volume"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-whatsapp"></i>
     </div>
-    <div class="col-md-4 col-sm-12 element">
+    <div class="col-md-4 col-12 element">
         <img class="img-turk" src="https://static.tildacdn.com/tild3665-6535-4962-a362-353561373864/Group_1.png">
     </div>
-    <div class="col-md-4 col-sm-12 right element">
+    <div class="col-md-4 col-12 right element">
         +7 700 500 8920<br>
         office@turkdunyasi.kz
     </div>
@@ -47,11 +47,11 @@
     </div>
     <div class="col-md-4 col-sm-12 element-bottom"></div>
 </div>
-</div>
+
 <!--КОНЕЦ НАВБАРА-->
 
 <!--НАЧАЛО ФИЛЬТР-->
-<div class="row filter-and-search col-sm-12">
+<div class="row filter-and-search">
     <div class="col-md-6 filter">
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle d-sm-block" type="button" data-toggle="dropdown">
@@ -79,11 +79,11 @@
 </div>
 <!--КОНЕЦ ПОИСКА-->
 <!--НАЧАЛО КАТАЛОГА-->
-<div class="row universities-container col-sm-12">
+<div class="row universities-container">
     {% if query%}
       {% if universities %}
         {% for result in universities %}
-          <div class="col-md-4 col-sm-12 university">
+          <div class="col-md-4 col-12 university">
             <div class="change-photos">
                 {% for image in images %}
                     {% if image.university.id == result.id and image.first %}
@@ -109,14 +109,14 @@
           </div>
         {% endfor %}
       {% else %}
-            <div class="col-md-12 col-sm-12 nothing">
+            <div class="col-md-12 col-12 nothing">
                 <h5>Ничего не найдено</h5>
             </div>
       {% endif %}
     {% else %}
         {% if universities %}
             {% for university in universities %}
-                <div class="col-md-4 col-sm-12 university">
+                <div class="col-md-4 col-12 university">
                     <div class="change-photos">
                         {% for image in university.image_src_set.all %}
                             {% if image.first %}
@@ -141,13 +141,13 @@
                 </div>
             {% endfor %}
         {% else %}
-            <div class="col-md-12 col-sm-12 nothing">
+            <div class="col-md-12 col-12 nothing">
                 <h5>Ничего не найдено</h5>
             </div>
         {% endif %}
     {% endif %}
 </div>
-</div>
+
 <!--КОНЕЦ КАТАЛОГА-->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
