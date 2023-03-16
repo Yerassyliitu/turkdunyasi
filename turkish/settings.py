@@ -26,10 +26,10 @@ SECRET_KEY = 'g8$6*83j(88052%8iq3#t#3ug4jci*4r3x64tstonzd^9aw(-a'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'turkdunyasi.herokuapp.com', 'web-production-366a.up.railway.app', 'www.turkdunyasi.kz', 'turkdunyasi.kz']
-
+CSRF_TRUSTED_ORIGINS = ['https://www.turkdunyasi.kz', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
