@@ -1,3 +1,19 @@
+function loadNextSection() {
+   var scrollTop = $(window).scrollTop(); // получаем текущую позицию скролла
+   $('section').each(function() {
+      var topOffset = $(this).offset().top; // получаем позицию текущей секции
+      if (scrollTop + $(window).height() > topOffset) {
+         $(this).find('.lazy-load').each(function() { // загружаем все элементы с классом 'lazy-load' в текущей секции
+            $(this).attr('src', $(this).data('src')).removeClass('lazy-load');
+         });
+      }
+   });
+}
+
+$(window).on('scroll', function() {
+   loadNextSection();
+});
+
 function myFunction1() {
     document.getElementById("myDropdown1").classList.toggle("show");
   }
