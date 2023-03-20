@@ -29,7 +29,7 @@ SECRET_KEY = 'g8$6*83j(88052%8iq3#t#3ug4jci*4r3x64tstonzd^9aw(-a'
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'turkdunyasi.herokuapp.com', 'web-production-366a.up.railway.app', 'www.turkdunyasi.kz', 'turkdunyasi.kz']
-CSRF_TRUSTED_ORIGINS = ['https://www.turkdunyasi.kz', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://www.turkdunyasi.kz', 'https://127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
@@ -132,10 +132,9 @@ USE_TZ = True
 
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = 'staticfiles/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
 ]
 
 
