@@ -1,6 +1,11 @@
 .main-text{
     font-family: 'Ubuntu', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -19,7 +24,23 @@ nav{
     color:#1f5bff;
     font-weight: 700;
 }
+.nav-icons{
+    margin-top: 7px;
+    margin-right: 50px;
 }
+.nav-icon{
+    font-size: 25px;
+    text-decoration: none;
+    font-size: 30px;
+}
+.nav-btn{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.nav-btn:hover{
+    box-shadow: none;
+}
+
 .btn-link{
     box-shadow: 5px 5px 25px black;
     border-radius: 50px;
@@ -29,11 +50,11 @@ nav{
 }
 
 
-
 .section-2{
     background-color: #2f2fa2;
     color: white;
     padding-top: 80px;
+    padding-bottom: 80px;
     overflow: hidden;
     background-image: url("../image/sec2.png");
 
@@ -98,7 +119,7 @@ nav{
 
 
 .section-3{
-    padding-top: 200px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,7 +135,7 @@ nav{
     margin-left: auto;
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 70px;
     max-width: 756px;
 }
 .invis{
@@ -213,11 +234,11 @@ button:hover .uli{
 }
 
 .section-4{
-    padding-top: 50px;
+    padding-top: 0px;
 }
 .title{
     text-align: center;
-    margin-top: 150px;
+    margin-top: 90px;
 }
 .title h1{
     color: #1f5bff;
@@ -229,6 +250,12 @@ button:hover .uli{
     font-size: 20px;
 }
 
+.section-4 h2{
+    text-align: center;
+    color: #1f5bff;
+    font-weight: 600;
+    font-size: 33px;
+}
 
 
 .mark{
@@ -277,12 +304,14 @@ button:hover .uli{
     background-position: left top ;
 }
 .wrapper{
-    margin-top: 200px;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;
     display: flex;
     flex-direction: column;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 .mark-right{
     align-self: end;
