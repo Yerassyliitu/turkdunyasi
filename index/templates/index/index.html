@@ -61,32 +61,36 @@
       </div>
     </div>
 <!--    </section>-->
-    <section id="section2">
+
       <div id="university" class="section-3 main-text">
-        <div class="container lazy-load">
+        <div class="container">
           <h1>Сотрудничаем более 10 университетами</h1>
           <h1>из Турции и Китая </h1>
           <ul class="sec3-list">
-            <div class="dropdown1">
-              <button onclick="myFunction1()" class="dropbtn1"><i>Список университетов Турции</i></button>
-              <div id="myDropdown1" class="dropdown-content1">
-                {% for turk in turkey_universities %}
-                  <a href="{% url 'catalog' %}">{{turk.title}}</a>
-                {% endfor %}
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <div class="card" style="width: 18rem; height:20rem;">
+                  <img class="card-img-top" src="{% static 'image/ISTANBUL.jpg' %}" alt="Card image cap">
+                  <div class="card-body">
+                    {% for turk in turkey_universities %}
+                      <a href="{% url 'catalog' %}">{{turk.title}}</a>
+                    {% endfor %}
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="dropdown2">
-              <button onclick="myFunction2()" class="dropbtn2"><i>Список университетов Китая</i></button>
-              <div id="myDropdown2" class="dropdown-content2">
-                {% for china in china_universities %}
-                  <a href="{% url 'catalog' %}">{{china.title}}</a>
-                {% endfor %}
+              <div class="col-md-6 col-sm-12">
+                <div class="card" style="width: 18rem; height:20rem;">
+                  <img class="card-img-top" src="{% static 'image/Places-in-China.jpg' %}" alt="Card image cap">
+                  <div class="card-body">
+                    {% for china in china_universities %}
+                      <a href="{% url 'catalog' %}">{{china.title}}</a>
+                    {% endfor %}
+                  </div>
+                </div>
               </div>
             </div>
           </ul>
         </div>
-      </div>
-    </section>
     <section id="section3">
     <div id="admission" class="section-4">
       <div class="title lazy-load">
