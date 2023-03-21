@@ -2,51 +2,48 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-a {
+a, button {
   text-decoration: none;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
 }
-ul{
-    list-style-type: none;
-}
-nav{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
-    display: flex;;
-}
 .nav-link{
     list-style-type: none;
-    color:#1f5bff;
-    font-weight: 700;
-}
-.nav-icons{
-    margin-top: 7px;
-    margin-right: 50px;
-}
-.nav-icon{
-    font-size: 25px;
-    text-decoration: none;
-    font-size: 30px;
-}
-.nav-btn{
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.nav-btn:hover{
-    box-shadow: none;
-}
-
-.btn-link{
-    box-shadow: 5px 5px 25px black;
-    border-radius: 50px;
-    text-decoration: none;
     color: #1f5bff;
     font-weight: 700;
+}
+@media only screen and (min-width: 768px){
+    .nav-item{
+    display: flex;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    }
+    .navfirst{
+    margin-left: 30px;
+    }
+    .lastnav{
+    margin-right:30px;
+    }
+    .consult{
+    margin-right: 30px;
+    }
+    .navicons{
+    padding-top: 30px;
+    }
+}
+.fa-brands{
+    font-size: 25px;
+}
+.fa-solid{
+    font-size: 25px;
+}
+.nav-link {
+    flex: 1;
+}
+.nav-item{
+    display: flex;
 }
 
 
@@ -54,7 +51,7 @@ nav{
     background-color: #2f2fa2;
     color: white;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     overflow: hidden;
     background-image: url("../image/sec2.png");
 
@@ -161,8 +158,6 @@ nav{
 button:hover .uli{
     display: block;
 }
-
-
 
 
 /* Кнопка выпадающего списка */
@@ -523,7 +518,7 @@ input, select{
     .nav-icons{
         padding-left: 15px;
         padding-bottom: 30px;
-        padding-top: 60px;
+        padding-top: 0px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -536,6 +531,7 @@ input, select{
         background-size: 80%;
         background-position: bottom;
         text-align: center;
+        margin-top: 50px;
     }
     .box{
         padding-left: 0;
