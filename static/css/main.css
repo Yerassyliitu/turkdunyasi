@@ -15,6 +15,11 @@ body{
     color: #1f5bff;
     font-weight: 700;
 }
+@media only screen and (max-width: 768px){
+    .sec3div{
+    margin-left: 50px;
+    }
+}
 @media only screen and (min-width: 768px){
     .nav-item{
     display: flex;
