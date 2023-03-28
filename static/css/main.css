@@ -223,6 +223,18 @@ button:hover .uli{
     text-decoration: none;
     display: block;
 }
+
+a.bullet::before { /* add the new bullet point */
+    display: inline-block;
+    content: '';
+    -webkit-border-radius: 0.25rem;
+    border-radius: 1rem;
+    height: 0.35rem;
+    width: 0.35rem;
+    margin-right: 0.3rem;
+    background-color: #1f5bff;
+}
+
   /* Изменение цвета выпадающих ссылок при наведении курсора */
 .btn-wrapper{
     display: flex;
