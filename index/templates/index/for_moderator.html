@@ -18,7 +18,7 @@
         </tr>
         {% for cli in client %}
             <tr>
-             <td>{{ cli.id }}</td>
+             <td>{{ forloop.counter }}</td>
              <td>{{ cli.name }}</td>
              <td>{{ cli.number }}</td>
              <td>{{ cli.country }}</td>
