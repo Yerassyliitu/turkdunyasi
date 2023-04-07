@@ -2,6 +2,31 @@
 {% load static %}
 <html>
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('#myForm').submit(function(event) {
+        // Отменяем стандартную отправку формы
+        event.preventDefault();
+
+        // Получаем данные формы
+        var formData = $(this).serialize();
+
+        // Отправляем AJAX-запрос
+        $.ajax({
+          url: {{url}},
+          type: 'POST',
+          headers: {
+            'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+          },
+          data: formData,
+          success: function(response) {
+            console.log(response);
+          }
+        });
+      });
+    });
+    </script>
     <meta charset="UTF-8">
     <title>Форма для клиента</title>
     <link rel="stylesheet" href="{% static 'css/style_2.css' %}">

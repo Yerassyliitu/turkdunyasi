@@ -103,7 +103,7 @@ def client_form(request):
         else:
             raise ValidationError("Введите правильный номер телефона.")
 
-
     form = ClientForm(request.GET)
-    context = {'form': form}
+    url = reverse('index:client_form')
+    context = {'form': form, 'url': url}
     return render(request, 'index/client_form.html', context)
