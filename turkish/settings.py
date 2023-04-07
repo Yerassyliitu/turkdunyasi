@@ -29,7 +29,7 @@ SECRET_KEY = 'g8$6*83j(88052%8iq3#t#3ug4jci*4r3x64tstonzd^9aw(-a'
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'turkdunyasi.herokuapp.com', 'web-production-366a.up.railway.app', 'www.turkdunyasi.kz', 'turkdunyasi.kz']
-CSRF_TRUSTED_ORIGINS = ['https://www.turkdunyasi.kz', 'https://127.0.0.1', 'https://www.turkdunyasi.kz/client_form', 'https://ads.tiktok.com', 'https://ads.tiktok.com/i18n/events_manager/v2/creationFlow/createEvents/CGNV2OJC77UET5SJLL1G?aadvid=7133173209310019585']
+CSRF_TRUSTED_ORIGINS = ['https://www.turkdunyasi.kz', 'https://127.0.0.1', 'https://www.turkdunyasi.kz/client_form', 'https://ads.tiktok.com', 'https://ads.tiktok.com/i18n/events_manager/v2/creationFlow/createEvents/CGNV2OJC77UET5SJLL1G?aadvid=7133173209310019585', 'https://www.tiktok.com']
 # Application definition
 
 INSTALLED_APPS = [
