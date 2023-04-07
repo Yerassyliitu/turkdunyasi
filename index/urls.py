@@ -1,11 +1,6 @@
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.template.defaulttags import url
-from django.urls import path, include
+from django.urls import path
 from . import views
-from django.conf.urls.static import static
-from django.conf import settings
 from .views import MyView, login_view, logout_view
-# app_name = 'index'
 urlpatterns = [
     path('', views.index, name="index"),
     path('university/', views.catalog, name="catalog"),
