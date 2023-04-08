@@ -1,3 +1,5 @@
+import re
+
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
@@ -12,6 +14,7 @@ from django.urls import reverse
 from django.views.generic import TemplateView
 from .models import *
 from .form import MyFilterForm, ClientForm, OwnerLoginForm
+from django.forms import ValidationError
 
 
 class MyView(TemplateView):
@@ -93,6 +96,8 @@ def search(request):
     return render(request, 'catalog.html', context)
 
 
+
+
 def client_form(request):
     if request.method == "POST":
         form = ClientForm(request.POST)
@@ -101,11 +106,10 @@ def client_form(request):
             messages.success(request, 'Ваша форма была успешно отправлена.')
             return redirect('client_form')
         else:
-            raise ValidationError("Введите правильный номер телефона.")
-
-    form = ClientForm(request.GET)
-    url = reverse('index:client_form')
-    context = {'form': form, 'url': url}
+            messages.error(request, 'Пожалуйста, заполните номер телефона корректно')
+    else:
+        form = ClientForm(request.GET)
+    context = {'form': form}
     return render(request, 'index/client_form.html', context)
 
 
