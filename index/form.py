@@ -12,7 +12,7 @@ class MyFilterForm(forms.Form):
 
 class ClientForm(forms.ModelForm):
     name = forms.CharField(
-        required=False,
+        required=True,
         label='Ваше Имя:',
         widget=forms.TextInput(attrs={'class': 'form-select', 'style': 'width: 300px'})
     )
@@ -25,7 +25,7 @@ class ClientForm(forms.ModelForm):
     country = forms.ChoiceField(
 
         choices=COUNTRY_CHOICES,
-        required=False,
+        required=True,
         label='Какая страна вас интересует?',
         widget=forms.Select(attrs={'class': 'form-select', 'style': 'width: 300px'}),
     )
@@ -37,7 +37,7 @@ class ClientForm(forms.ModelForm):
 
     language = forms.ChoiceField(
         choices=LANGUAGE_CHOICES,
-        required=False,
+        required=True,
         label='Выберите язык консультации:',
         widget=forms.Select(attrs={'class': 'form-select', 'style': 'width: 300px'}),
     )
@@ -50,13 +50,13 @@ class ClientForm(forms.ModelForm):
 
     school_class = forms.ChoiceField(
         choices=SCHOOL_CLASSES_CHOICES,
-        required=False,
+        required=True,
         label='В каком вы классе?',
         widget=forms.Select(attrs={'class': 'form-select', 'style': 'width: 300px'}),
     )
 
     number = forms.CharField(
-        required=False,
+        required=True,
         label='Телефон',
         error_messages={'invalid': 'Неверный формат номера телефона'},
         widget=forms.TextInput(attrs={'placeholder': 'Номер телефона в формате +7xxxxxxxxxx', 'style': 'width: 300px'})

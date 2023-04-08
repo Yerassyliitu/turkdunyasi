@@ -107,3 +107,13 @@ def client_form(request):
     url = reverse('index:client_form')
     context = {'form': form, 'url': url}
     return render(request, 'index/client_form.html', context)
+
+
+def delete_form(request, form_id):
+    form = Client_forms.objects.get(pk=form_id)
+    if request.method == "POST":
+        form.delete()
+        client = Client_forms.objects.all()
+        return render(request, 'index/for_moderator.html', {'client': client})
+    print('alo2')
+    return render(request, 'index/for_moderator.html')

@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="{% static 'css/style_2.css' %}">
 </head>
 <body>
-    <table>
+    <button id="downloadexcel" class="btn btn-secondary">Экспорт</button>
+    <table id="downloadtable">
         <tr>
             <th>id</th>
             <th>name</th>
@@ -15,6 +16,8 @@
             <th>country</th>
             <th>language</th>
             <th>class</th>
+            <th>date</th>
+            <th>delete</th>
         </tr>
         {% for cli in client %}
             <tr>
@@ -24,8 +27,22 @@
              <td>{{ cli.country }}</td>
              <td>{{ cli.language }}</td>
              <td>{{ cli.school_class }}</td>
+             <td>{{ cli.date }}</td>
+             <td>
+                <form action="{% url 'delete-form' cli.id %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+             </td>
             </tr>
         {% endfor %}
     </table>
+    <script>
+        document.getElementById('downloadexcel').addEventListener('click', function() {
+            var table2excel = new Table2Excel();
+            table2excel.export(document.querySelectorAll("#downloadtable"));
+        });
+    </script>
+    <script src="{% static 'js/table2excel.js' %}"></script>
 </body>
 </html>
