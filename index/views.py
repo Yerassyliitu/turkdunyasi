@@ -96,6 +96,8 @@ def search(request):
     return render(request, 'catalog.html', context)
 
 
+def redirect_form(request):
+    return render(request, 'index/redirect-form.html')
 
 
 def client_form(request):
@@ -104,7 +106,7 @@ def client_form(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Ваша форма была успешно отправлена.')
-            return redirect('client_form')
+            return redirect('redirect-form')
         else:
             messages.error(request, 'Пожалуйста, заполните номер телефона корректно')
     else:
@@ -121,3 +123,5 @@ def delete_form(request, form_id):
         return render(request, 'index/for_moderator.html', {'client': client})
     print('alo2')
     return render(request, 'index/for_moderator.html')
+
+
