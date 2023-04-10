@@ -10,7 +10,6 @@ urlpatterns = [
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('delete-form/<int:form_id>/', views.delete_form, name="delete-form"),
-    path('redirect-form', views.redirect_form, name="redirect-form")
 ]
 
 
