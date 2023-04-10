@@ -67,6 +67,27 @@
     </div>
 
 </div>
-
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    $(document).on('submit', '#post-form', function(event) {
+        event.preventDefault();
+        $.ajax({
+          type: 'POST',
+          url: '/client_form',
+          data: {
+              name: $('#name').val(),
+              country: $('#country').val(),
+              language: $('#language').val(),
+              school_class: $('#school_class').val(),
+              number: $('#number').val(),
+              сsrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken']).val()
+          },
+          success: function (data){
+              $('h2').html(data);
+          }
+        });
+    });
+</script>
+
 </html>
