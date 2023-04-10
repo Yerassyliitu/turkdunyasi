@@ -1,5 +1,5 @@
 import re
-
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
@@ -96,17 +96,17 @@ def search(request):
     return render(request, 'catalog.html', context)
 
 
-def redirect_form(request):
-    return render(request, 'index/redirect-form.html')
 
 
+
+@csrf_exempt
 def client_form(request):
     if request.method == "POST":
         form = ClientForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Ваша форма была успешно отправлена.')
-            return redirect('redirect-form')
+            return redirect('client_form')
         else:
             messages.error(request, 'Пожалуйста, заполните номер телефона корректно')
     else:
